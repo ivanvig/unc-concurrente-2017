@@ -19,6 +19,6 @@ public class Main {
             e.printStackTrace();
         }
 
-        System.out.printf("Hilo finalizado\n");
+        System.out.printf("Thread has finished");
     }
 }
