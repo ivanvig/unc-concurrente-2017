@@ -18,7 +18,9 @@ public class Account {
         }
 
         tmp += amount;
-        this.balance = tmp;
+        //synchronized (this) {
+            this.balance = tmp;
+        //}
     }
 
     public synchronized void substractAmount(double amount) {
@@ -31,7 +33,9 @@ public class Account {
         }
 
         tmp -= amount;
-        this.balance = tmp;
+        //synchronized (this) {
+            this.balance = tmp;
+        //}
     }
 
     /**
