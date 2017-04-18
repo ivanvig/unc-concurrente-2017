@@ -5,9 +5,6 @@ package ejercicio1;
  */
 public class Bank implements Runnable {
 
-    private static final int I_END = 100;
-    private static final double DOUBLE_AMOUNT_TO_SUBSTRACT = 1_000D;
-
     private Account account;
 
     public Bank(Account account) {
@@ -19,8 +16,8 @@ public class Bank implements Runnable {
      */
     @Override
     public void run() {
-        for (int i = TCNumberUtils.INT_ZERO; i < I_END; i++) {
-            this.account.substractAmount(DOUBLE_AMOUNT_TO_SUBSTRACT);
+        for (int i = 0; i < 100; i++) {
+            this.account.substractAmount(1000);
         }
 
     }

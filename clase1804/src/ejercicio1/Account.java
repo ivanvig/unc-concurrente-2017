@@ -5,7 +5,6 @@ package ejercicio1;
  */
 public class Account {
 
-    private static final long LONG_THREAD_SLEEP_MILIS = 10L;
 
     private double balance;
 
@@ -13,7 +12,7 @@ public class Account {
         double tmp = this.balance;
 
         try {
-            Thread.sleep(LONG_THREAD_SLEEP_MILIS);
+            Thread.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -26,7 +25,7 @@ public class Account {
         double tmp = this.balance;
 
         try {
-            Thread.sleep(LONG_THREAD_SLEEP_MILIS);
+            Thread.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
