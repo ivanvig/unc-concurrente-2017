@@ -5,13 +5,9 @@ package ejercicio1;
  */
 public class Main {
 
-    private static final double DOUBLE_INITIAL_AMOUNT = 1_000D;
-    private static final String STRING_FORMAT_INITIAL_BALANCE = "Account : Initial Balance: %f" + TCStringUtils.NL;
-    private static final String STRING_FORMAT_FINAL_BALANCE = "Account : Final Balance: %f" + TCStringUtils.NL;
-
     public static void main(String[] args) {
         Account account = new Account();
-        account.setBalance(DOUBLE_INITIAL_AMOUNT);
+        account.setBalance(1000);
 
         Company company = new Company(account);
         Thread companyThread = new Thread(company);
@@ -19,7 +15,7 @@ public class Main {
         Bank bank = new Bank(account);
         Thread bankThread = new Thread(bank);
 
-        System.out.printf(STRING_FORMAT_INITIAL_BALANCE, account.getBalance());
+        System.out.printf("Account : Initial Balance: %f", account.getBalance());
 
         // start the threads
         companyThread.start();
@@ -30,7 +26,7 @@ public class Main {
             companyThread.join();
             bankThread.join();
 
-            System.out.printf(STRING_FORMAT_FINAL_BALANCE, account.getBalance());
+            System.out.printf("Account : Final Balance: %f", account.getBalance());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
