@@ -46,17 +46,17 @@ public class Cinema {
     }
 
     public boolean returnTickets1(long number) {
-        synchronized (this.controlCinema1) {
+        //synchronized (this.controlCinema1) {
             this.vacanciesCinema1 += number;
             return true;
-        }
+       // }
     }
 
     public boolean returnTickets2(long number) {
-        synchronized (this.controlCinema2) {
+        //synchronized (this.controlCinema2) {
             this.vacanciesCinema2 += number;
             return true;
-        }
+        //}
     }
 
     /**
