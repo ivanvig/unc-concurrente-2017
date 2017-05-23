@@ -19,9 +19,9 @@ public class Reader implements Runnable {
      */
     @Override
     public void run() {
-        for (int i = TCNumberUtils.INT_ZERO; i < ITERATIONS; i++) {
-            System.out.printf("%s: Price 1: %f%s", Thread.currentThread().getName(), this.pricesInfo.getPrice1(), TCStringUtils.NL);
-            System.out.printf("%s: Price 2: %f%s", Thread.currentThread().getName(), this.pricesInfo.getPrice2(), TCStringUtils.NL);
+        for (int i = 0; i < ITERATIONS; i++) {
+            System.out.printf("%s: Price 1: %f%s", Thread.currentThread().getName(), this.pricesInfo.getPrice1());
+            System.out.printf("%s: Price 2: %f%s", Thread.currentThread().getName(), this.pricesInfo.getPrice2());
         }
     }
 

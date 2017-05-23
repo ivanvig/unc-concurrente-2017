@@ -16,14 +16,9 @@ public class Writer implements Runnable {
         this.pricesInfo = pricesInfo;
     }
 
-    /*
-     * (non-Javadoc)
-     *
-     * @see java.lang.Runnable#run()
-     */
     @Override
     public void run() {
-        for (int i = TCNumberUtils.INT_ZERO; i < ITERATIONS; i++) {
+        for (int i = 0; i < ITERATIONS; i++) {
             System.out.println("Writer: Attempt to modify the prices.");
             this.pricesInfo.setPrices(Math.random() * MULTIPLIER1, Math.random() * MULTIPLIER2);
             System.out.println("Writer: Prices have been modified.");
