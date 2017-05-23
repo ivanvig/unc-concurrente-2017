@@ -20,8 +20,8 @@ public class Reader implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < ITERATIONS; i++) {
-            System.out.printf("%s: Price 1: %f%s", Thread.currentThread().getName(), this.pricesInfo.getPrice1());
-            System.out.printf("%s: Price 2: %f%s", Thread.currentThread().getName(), this.pricesInfo.getPrice2());
+            System.out.printf("%s: Price 1: %f", Thread.currentThread().getName(), this.pricesInfo.getPrice1());
+            System.out.printf("%s: Price 2: %f", Thread.currentThread().getName(), this.pricesInfo.getPrice2());
         }
     }
 
